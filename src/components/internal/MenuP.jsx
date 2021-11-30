@@ -29,7 +29,7 @@ export default function MenuP() {
           <div className="d-flex justify-content-center"><h1>Catálogo</h1><br /></div>
         </Row>
         <Row>
-        <div className="d-flex flex-wrap flex-md-row justify-content-sm-around justify-content-lg-start ">
+        <div className="d-flex flex-wrap flex-md-row justify-content-around justify-content-lg-start ">
       
           {itensP.map((card) => (
             <CardP key={card.id} img={card.img} title={card.title} text={card.text} price={card.price} button={() => handleAddCart(card.id, card.title, card.price)}/>
