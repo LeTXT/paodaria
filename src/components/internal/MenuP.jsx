@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row'
 import CardP from './forMenuP/CardP'
 import { itensP } from './forMenuP/ItensP'
 
-import ProductsInTheCart from './forCart/ProductsInTheCart'
+import { inCart } from './forCart/ProductsInTheCart'
 
 
 export default function MenuP() {
@@ -15,11 +15,14 @@ export default function MenuP() {
   const [cart, setCart] = useState([])
 
     const handleAddCart = (id, title, price) => {
-
+    
     console.log(id, title, price)
-    setCart([... cart, {id, title, price}])
+    setCart(() => {
+      [...cart, {id, title, price}]
+      inCart = cart
+    })
     console.log(cart)
-
+    
   }
 
   return (
