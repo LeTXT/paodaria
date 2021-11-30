@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row'
 import CardP from './forMenuP/CardP'
 import { itensP } from './forMenuP/ItensP'
 
-import uniqid from 'uniqid'
+import ProductsInTheCart from './forCart/ProductsInTheCart'
 
 
 export default function MenuP() {
@@ -17,7 +17,7 @@ export default function MenuP() {
     const handleAddCart = (id, title, price) => {
 
     console.log(id, title, price)
-    setCart([...cart, {id, title, price}])
+    setCart([... cart, {id, title, price}])
     console.log(cart)
 
   }

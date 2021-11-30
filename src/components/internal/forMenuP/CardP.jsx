@@ -31,11 +31,11 @@ export default function CardP(props) {
             Adicionar
           </button>
           <div className="d-flex">
-            <button onClick={handleButtonSum} className="btn">
+            <button onClick={handleButtonSum} className="btn shadow-none">
               +
             </button>
-            <div className="form-control">{valueI}</div>
-            <button onClick={handleButtonSub} className="btn">
+            <div className="form-control ">{valueI}</div>
+            <button onClick={handleButtonSub} className="btn shadow-none">
               -
             </button>
           </div>
