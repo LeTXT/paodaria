@@ -3,6 +3,10 @@ import Button from 'react-bootstrap/Button'
 
 import { BsCart2 } from "react-icons/bs"
 import Modal from 'react-bootstrap/Modal'
+import inCart from './forCart/ProductsInTheCart.json'
+import CartCard from './forCart/CartCard'
+import { itensP } from './forMenuP/ItensP'
+
 
 
 
@@ -19,10 +23,12 @@ export default function Cart() {
 
       <Modal show={state} onHide={handleClose} size="lg" centered>
           <Modal.Header closeButton={state}>
-            <Modal.Title>Carrinho de compras</Modal.Title>
+            <Modal.Title><h2>Carrinho de compras</h2></Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h1>Nenhum pão aqui ainda</h1>
+            {inCart.map((card, id) => (
+               <CartCard img={card.img} title={card.title} price={card.price} button={() => handleAddCart(card.id, card.title, card.price)}/>
+            ))}
           </Modal.Body>
         </Modal>
 

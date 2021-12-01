@@ -14,14 +14,13 @@ export default function MenuP() {
 
   const [cart, setCart] = useState([])
 
-    const handleAddCart = (id, title, price) => {
+    const handleAddCart = (id, img, title, price) => {
     
     console.log(id, title, price)
-    setCart(() => {
-      [...cart, {id, title, price}]
-      inCart = cart
-    })
+    setCart(() => [... cart, { id, img, title, price }])
     console.log(cart)
+    // inCart.push(cart.value)
+    
     
   }
 
