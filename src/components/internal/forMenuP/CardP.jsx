@@ -13,7 +13,7 @@ export default function CardP(props) {
 
   const handleButtonSub = () => valueI === 0 ? 0 : setValueI(valueI - 1)
 
-  const amount = Number(valueI) 
+  const amount = {valueI}
   console.log(amount)
 
   return (

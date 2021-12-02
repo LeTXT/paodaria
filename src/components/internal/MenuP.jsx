@@ -22,6 +22,7 @@ export default function MenuP() {
     console.log(cart)
 
     inCart = [... cart, { id, img, title, price, amount }]
+    console.log(amount)
   }
 
   return (
@@ -34,7 +35,7 @@ export default function MenuP() {
         <div className="d-flex flex-wrap flex-md-row justify-content-around justify-content-lg-start ">
       
           {itensP.map((card) => (
-            <CardP key={card.id} img={card.img} title={card.title} text={card.text} price={card.price} button={() => handleAddCart(card.id, card.img, card.title, card.price, amount)}/>
+            <CardP key={card.id} img={card.img} title={card.title} text={card.text} price={card.price} button={() => handleAddCart(card.id, card.img, card.title, card.price, card.amount)}/>
           ))}
         </div>
         </Row>
