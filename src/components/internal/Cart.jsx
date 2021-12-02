@@ -15,6 +15,8 @@ export default function Cart() {
 
   const handleClose = () => setState(false)
   const handleShow = () => setState(true)
+
+  
   return (
     <div>
       <Button onClick={handleShow} variant='light' >
@@ -26,8 +28,8 @@ export default function Cart() {
             <Modal.Title><h2>Carrinho de compras</h2></Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {inCart.map((card, id) => (
-               <CartCard key={id} img={card.img} title={card.title} price={card.price} value={card.amount} button={() => handleAddCart(card.id, card.title, card.price)}/>
+            {inCart.map((card, id) => ( 
+               <CartCard key={id} img={card.img} title={card.title} price={card.price} value={card.numP} button={() => handleAddCart(card.id, card.title, card.price)}/>
             ))}
           </Modal.Body>
         </Modal>

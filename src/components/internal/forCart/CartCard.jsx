@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Card from 'react-bootstrap/Card';
+import { BiTrash } from 'react-icons/bi'
 
 
 export default function CartCard(props) {
@@ -18,17 +19,11 @@ export default function CartCard(props) {
       <div className='d-flex'><Card.Img src={props.img}></Card.Img>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
-        <div className="d-flex justify-content-start">
+        <div className="d-flex justify-content-end">
           <h3>R$ {props.price}</h3>
         </div>
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-around">
           
-          <button
-            onClick={props.button}
-            className={`btn btn-warning btn-md`}
-          >
-            Adicionar
-          </button>
           <div className="d-flex">
             <button onClick={handleButtonSum} className="btn shadow-none">
               +
@@ -37,9 +32,12 @@ export default function CartCard(props) {
             <button onClick={handleButtonSub} className="btn shadow-none">
               -
             </button>
+            
           </div>
+          
         </div>
       </Card.Body></div>
+      
     </Card>
   );
 }

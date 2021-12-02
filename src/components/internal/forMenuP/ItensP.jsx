@@ -1,5 +1,6 @@
 
 import uniqid from 'uniqid'
+import { value } from './CardP'
 
 export const itensP = [
   {
@@ -7,7 +8,7 @@ export const itensP = [
     img: "https://docs.google.com/uc?id=1aw9kaguMACocMqF5fvdIzNupSekgv5Ol",
     title: "Pão Francês",
     text: "Um pouco sobre o pão Francês",
-    price: 1
+    price: 1,
   },
   {
     id: uniqid(),
