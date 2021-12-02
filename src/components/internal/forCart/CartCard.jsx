@@ -11,6 +11,7 @@ export default function CartCard(props) {
 
   const handleButtonSub = () => valueI === 0 ? 0 : setValueI(valueI - 1)
 
+  
 
   return (
     <Card className="col-5 col-md-2 m-2">
@@ -32,7 +33,7 @@ export default function CartCard(props) {
             <button onClick={handleButtonSum} className="btn shadow-none">
               +
             </button>
-            <div className="form-control ">{valueI}</div>
+            <div className="form-control ">{props.value}</div>
             <button onClick={handleButtonSub} className="btn shadow-none">
               -
             </button>

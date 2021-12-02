@@ -13,6 +13,9 @@ export default function CardP(props) {
 
   const handleButtonSub = () => valueI === 0 ? 0 : setValueI(valueI - 1)
 
+  const amount = Number(valueI) 
+  console.log(amount)
+
   return (
     <Card className="col-5 col-md-2 m-2">
       <Card.Img src={props.img}></Card.Img>

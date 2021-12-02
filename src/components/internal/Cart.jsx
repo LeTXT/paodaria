@@ -27,7 +27,7 @@ export default function Cart() {
           </Modal.Header>
           <Modal.Body>
             {inCart.map((card, id) => (
-               <CartCard key={id} img={card.img} title={card.title} price={card.price} button={() => handleAddCart(card.id, card.title, card.price)}/>
+               <CartCard key={id} img={card.img} title={card.title} price={card.price} value={card.amount} button={() => handleAddCart(card.id, card.title, card.price)}/>
             ))}
           </Modal.Body>
         </Modal>
