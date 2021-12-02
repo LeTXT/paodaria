@@ -34,9 +34,10 @@ export default function MenuP() {
         const result = cart.filter((item) => item.id === id)
         if (result) {
           let numPSum = numP + cart[cart.lenght - 2].numP
-          setCart(() => [... cart, { id, img, title, price, numPSum }])
           
-          inCart = [... cart, { id, img, title, price, numPSum }]
+          setCart(() => [... cart, { id, img, title, price, numP: numPSum }])
+          
+          inCart = [... cart, { id, img, title, price, numP: numPSum }]
         }
         
   }
