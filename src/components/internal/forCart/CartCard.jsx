@@ -17,7 +17,7 @@ export default function CartCard(props) {
       <div className='d-flex'><Card.Img src={props.img}></Card.Img>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
-        <div className="d-flex justify-content-end">
+        <div className="d-flex justify-content-start">
           <h3>R$ {props.price}</h3>
         </div>
         <div className="d-flex justify-content-between">

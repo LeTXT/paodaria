@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button'
 
 import { BsCart2 } from "react-icons/bs"
 import Modal from 'react-bootstrap/Modal'
-import inCart from './forCart/ProductsInTheCart.json'
+import { inCart } from './forCart/ProductsInTheCart'
 import CartCard from './forCart/CartCard'
 import { itensP } from './forMenuP/ItensP'
 
@@ -27,7 +27,7 @@ export default function Cart() {
           </Modal.Header>
           <Modal.Body>
             {inCart.map((card, id) => (
-               <CartCard img={card.img} title={card.title} price={card.price} button={() => handleAddCart(card.id, card.title, card.price)}/>
+               <CartCard key={id} img={card.img} title={card.title} price={card.price} button={() => handleAddCart(card.id, card.title, card.price)}/>
             ))}
           </Modal.Body>
         </Modal>
