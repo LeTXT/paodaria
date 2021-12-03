@@ -14,6 +14,7 @@ export default function CardP({img, title, price, text, button, value}) {
 
   const but = (e) => valueI === 0 ? e = 'disabled' : e = ''
 
+
   const handleButtonSum = () => setValueI(valueI + 1)
 
   const handleButtonSub = () => valueI === 0 ? 0 : setValueI(valueI - 1)

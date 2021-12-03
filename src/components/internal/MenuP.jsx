@@ -24,21 +24,43 @@ export default function MenuP() {
   const [cart, setCart] = useState([])
 
     const handleAddCart = (id, img, title, price) => {
-      
-        if (inCart.lenght < 2) {
-          console.log(id, title, price)
-        setCart(() => [... cart, { id, img, title, price, numP }])
 
-        inCart = [... cart, { id, img, title, price, numP }]
+      const newId = id
+      
+      let obj = { id, img, title, price, numP }
+
+      const maps = inCart.map(e => e.id)
+      maps.forEach((e) => {
+        if(e === newId) {
+          inCart.forEach((e) => {
+            if(e === obj) {
+              console.log(e.numP)
+              e.numP + obj.numP 
+              id, img, title, price = null 
+              setCart(() => [... cart, numP])
+              inCart = [... cart, numP ]
+            } 
+          })
+        } else {
+          setCart(() => [... cart, obj])
+        
+          inCart = [... cart, obj ]
         }
-        const result = cart.filter((item) => item.id === id)
-        if (result) {
-          let numPSum = numP + cart[cart.lenght - 2].numP
-          
-          setCart(() => [... cart, { id, img, title, price, numP: numPSum }])
-          
-          inCart = [... cart, { id, img, title, price, numP: numPSum }]
-        }
+      })
+
+      // if(true === newId) {
+      //   console.log('ué')
+      // }
+      // const result = cart.filter((item) => item.id === id)
+      
+      // if (cart.length > 1) {
+        
+        
+      //    numP = numP + cart[cart.length - 2].numP
+        
+      //    inCart[inCart.length - 1].numP = numP
+        
+      // }   
         
   }
 
